@@ -4,7 +4,7 @@ let allPokemonList = []; // Variable to store the complete Pokémon list
 let currentPage = 1;
 const itemsPerPage = 10;
 
-// Function to fetch all Pokémon data
+// fetch all Pokémon data
 async function fetchAllPokemonData() {
   try {
     const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=898");
@@ -17,7 +17,7 @@ async function fetchAllPokemonData() {
   }
 }
 
-// Function to fetch Pokémon details for each Pokémon
+//  fetch Pokémon details for each Pokémon
 async function fetchPokemonDetails() {
   for (const pokemon of allPokemonList) {
     try {
@@ -31,7 +31,7 @@ async function fetchPokemonDetails() {
   }
 }
 
-// Function to display the list of Pokémon
+// Display the list of Pokémon
 function displayPokemonList(page) {
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
