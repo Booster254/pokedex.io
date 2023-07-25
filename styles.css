@@ -17,9 +17,9 @@ body {
   border-radius: 10px;
   position: relative;
   z-index: 1;
-  overflow: auto;
+  height: 100vh; /* Set the container to fill the entire viewport height */
+  overflow-y: scroll; /* Enable vertical scroll if needed */
 }
-
 h1 {
   font-size: 32px;
   color: #ff3b3f;
@@ -101,6 +101,7 @@ input[type="text"] {
     background-position: 200% 200%;
   }
 }
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -127,3 +128,14 @@ input[type="text"] {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+  .pokemon-card:hover .pokemon-classification,
+  .pokemon-card:hover .pokemon-qualities {
+    display: block;
+  }
+
+  .pokemon-classification,
+  .pokemon-qualities {
+    display: none;
+    margin-top: 5px;
+  }
